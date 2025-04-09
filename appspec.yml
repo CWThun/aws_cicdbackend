@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: build/libs/NTTDataCICDBackend-0.0.1-SNAPSHOT.war
+    destination: /home/ec2-user/CICDBackend
+
+hooks:
+  AfterInstall:
+    - location: scripts/chmod.sh
+      timeout: 30
+      runas: ec2-user
+    - location: scripts/restart.sh
+      timeout: 60
+      runas: ec2-user
+
