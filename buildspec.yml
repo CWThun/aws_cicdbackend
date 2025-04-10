@@ -9,6 +9,6 @@ phases:
       - ./gradlew clean build
 artifacts:
   files:
-    - build/libs/NTTDataCICDBackend-0.0.1-SNAPSHOT.war
+    - build/libs/oboss-demoapp-backend-0.0.1-SNAPSHOT.war
     - appspec.yml
     - scripts/**
